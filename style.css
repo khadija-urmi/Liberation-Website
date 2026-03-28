@@ -1,12 +1,11 @@
+body{
+    margin: 0;
+  }
 .navbar-section {
     background-color: #006a4e;
     color:white;
 }
-.nav-content{
-    width: 1080px;
-    margin: 0 auto;
-    padding: 10px ;
-}
+
 .nav-link{
     color:white !important;
     font-size: 18px;
@@ -15,5 +14,20 @@
 .nav-link:hover{
 color: #f42a41 !important;
 transition: 0.3s;
-
+}
+.banner-section{
+    background: url('./assets/banner.jpg') no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    inset: 0;
+}
+.footer-section{
+    background-color: #006a4e;
+    color: white;
+    padding:  30px 20px;
 }
