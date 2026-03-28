@@ -1,0 +1,19 @@
+.navbar-section {
+    background-color: #006a4e;
+    color:white;
+}
+.nav-content{
+    width: 1080px;
+    margin: 0 auto;
+    padding: 10px ;
+}
+.nav-link{
+    color:white !important;
+    font-size: 18px;
+    font-weight: 500;
+}
+.nav-link:hover{
+color: #f42a41 !important;
+transition: 0.3s;
+
+}
