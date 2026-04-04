@@ -12,9 +12,12 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-section">
+ <nav class="navbar navbar-expand-lg navbar-dark navbar-section">
     <div class="container-fluid">
-      <a class="navbar-brand fs-3 fw-bold text-white" href="index.html">Liberation war 1971</a>
+      <a class="navbar-brand fs-2 fw-bold text-white" href="index.html">Liberation war 1971</a>
+       <div class="clock-card">
+        <p id="clock"></p>
+    </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
         aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -41,6 +44,7 @@
       </div>
     </div>
   </nav>
+ 
   <section class="banner-section">
     <div class="overlay d-flex justify-content-center align-items-center flex-column text-white text-center">
       <h5 class="fs-1 fw-bold mb-3">Story of Liberation War 1971</h5>
@@ -61,6 +65,21 @@
     </div>
   </section>
 
+  <script>
+    function updateClock(){
+      const presentTym = new Date();
+
+      const hours = String(presentTym.getHours()).padStart(2, '0');
+      const minutes = String(presentTym.getMinutes()).padStart(2, '0');
+      const seconds = String(presentTym.getSeconds()).padStart(2, '0');
+      
+
+      const cloclkElement = document.getElementById('clock');
+      cloclkElement.textContent = `${hours}:${minutes}: ${seconds}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
